@@ -1,8 +1,8 @@
 package com.ramos.springboot_graphql.persistence;
 
+import com.ramos.springboot_graphql.entities.Course;
 import org.springframework.data.repository.CrudRepository;
 
-import java.awt.*;
 
-public interface ICourseDAO extends CrudRepository<Cursor, Long> {
+public interface ICourseDAO extends CrudRepository<Course, Long> {
 }
