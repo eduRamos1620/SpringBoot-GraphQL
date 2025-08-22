@@ -1,6 +1,12 @@
 #Query - solo para hacer consultas
 type Query{
-    findStudentById(studentId: String) : Student
+    findStudentById(studentId: String) : Student,
+    findAllStudents : [Student]
+}
+
+type Mutation{
+    createStudents(inputStudent : InputStudent) : Student,
+    deleteStudentById(studentId : String) : String
 }
 
 type Student {
@@ -8,4 +14,12 @@ type Student {
     name : String,
     lastname : String,
     age : Int
+}
+
+input InputStudent{
+    id : ID,
+    name : String,
+    lastname : String,
+    age : Int,
+    courseId : String!
 }
